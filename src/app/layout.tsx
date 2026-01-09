@@ -50,6 +50,21 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <script
+          type="speculationrules"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              prerender: [
+                {
+                  where: { href_matches: "/*" },
+                  eagerness: "moderate",
+                },
+              ],
+            }),
+          }}
+        />
+      </head>
       <body>
         <main>
           {children}
