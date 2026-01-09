@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
 import ScrollToTop from "@/components/ScrollToTop";
+import CommandPalette from "@/components/CommandPalette";
+import { getAllArticlesMeta } from "@/lib/articles";
 
 const SITE_URL = "https://claudiuclement.com";
 
@@ -40,6 +42,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const articles = getAllArticlesMeta().map((a) => ({
+    slug: a.slug,
+    title: a.title,
+  }));
+
   return (
     <html lang="en">
       <body>
@@ -52,6 +59,8 @@ export default function RootLayout({
               <a href="https://x.com/clementclaudiu" target="_blank" rel="noopener noreferrer">X</a>
               {" · "}
               <ThemeToggle />
+              {" · "}
+              <span className="meta" style={{ fontSize: "11px" }}>⌘K</span>
             </p>
             <p className="copyright">
               © {new Date().getFullYear()} Claudiu Clement
@@ -59,6 +68,7 @@ export default function RootLayout({
           </footer>
           <ScrollToTop />
         </main>
+        <CommandPalette articles={articles} />
       </body>
     </html>
   );

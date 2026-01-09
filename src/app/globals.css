@@ -385,3 +385,103 @@ p {
   from { opacity: 0; transform: translateX(-50%) translateY(5px); }
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
+
+/* Command Palette */
+.command-palette-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20vh;
+  z-index: 1000;
+  animation: fadeInOverlay 0.15s ease-out;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.command-palette {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: slideIn 0.15s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.command-palette-input {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+.command-palette-input::placeholder {
+  color: var(--meta-color);
+}
+
+.command-palette-results {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.command-palette-empty {
+  padding: 20px;
+  text-align: center;
+  color: var(--meta-color);
+  font-size: 13px;
+}
+
+.command-palette-group {
+  padding: 8px 0;
+}
+
+.command-palette-group-label {
+  padding: 4px 16px 8px;
+  font-size: 11px;
+  color: var(--meta-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.command-palette-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.command-palette-item:hover,
+.command-palette-item.selected {
+  background: var(--code-bg);
+}
+
+.command-palette-footer {
+  display: flex;
+  gap: 16px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--border-color);
+  font-size: 11px;
+  color: var(--meta-color);
+}
+
+.command-palette-footer span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
