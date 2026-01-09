@@ -3,6 +3,7 @@ import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
 import ScrollToTop from "@/components/ScrollToTop";
 import CommandPalette from "@/components/CommandPalette";
+import KeyboardShortcutHint from "@/components/KeyboardShortcutHint";
 import { getAllArticlesMeta } from "@/lib/articles";
 
 const SITE_URL = "https://claudiuclement.com";
@@ -60,7 +61,7 @@ export default function RootLayout({
               {" · "}
               <ThemeToggle />
               {" · "}
-              <span className="meta" style={{ fontSize: "11px" }}>⌘K</span>
+              <KeyboardShortcutHint />
             </p>
             <p className="copyright">
               © {new Date().getFullYear()} Claudiu Clement
