@@ -332,3 +332,19 @@ p {
 .copy-button {
   background: var(--code-bg);
 }
+
+.reading-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 1000;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: var(--text-color);
+  transition: width 0.1s ease-out;
+}

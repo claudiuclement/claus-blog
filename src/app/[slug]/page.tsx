@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { getArticle, getAllArticleSlugs, getAdjacentArticles } from "@/lib/articles";
 import Link from "next/link";
 import ShareButtons from "@/components/ShareButtons";
+import ReadingProgress from "@/components/ReadingProgress";
 
 const SITE_URL = "https://claudiuclement.com";
 
@@ -47,6 +48,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
 
   return (
     <>
+      <ReadingProgress />
       <p className="meta">
         <Link href="/">← Essays</Link>
       </p>
