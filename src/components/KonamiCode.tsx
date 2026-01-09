@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const KONAMI_CODE = [
   "ArrowUp",
@@ -17,27 +17,25 @@ const KONAMI_CODE = [
 
 export default function KonamiCode() {
   const [show, setShow] = useState(false);
-  const [index, setIndex] = useState(0);
+  const indexRef = useRef(0);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.code === KONAMI_CODE[index]) {
-        const nextIndex = index + 1;
-        if (nextIndex === KONAMI_CODE.length) {
+      if (e.code === KONAMI_CODE[indexRef.current]) {
+        indexRef.current++;
+        if (indexRef.current === KONAMI_CODE.length) {
           setShow(true);
-          setIndex(0);
+          indexRef.current = 0;
           setTimeout(() => setShow(false), 3000);
-        } else {
-          setIndex(nextIndex);
         }
       } else {
-        setIndex(0);
+        indexRef.current = 0;
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [index]);
+  }, []);
 
   if (!show) return null;
 
