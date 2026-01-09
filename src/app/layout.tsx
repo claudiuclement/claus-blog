@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const SITE_URL = "https://claudiuclement.com";
 
@@ -56,6 +57,7 @@ export default function RootLayout({
               © {new Date().getFullYear()} Claudiu Clement
             </p>
           </footer>
+          <ScrollToTop />
         </main>
       </body>
     </html>
