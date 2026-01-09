@@ -16,7 +16,7 @@ export default function About() {
       <div className="bio-content">
         <p>I&apos;m Claudiu.</p>
         <p>
-          By day, I build technology for e-commerce brands—mostly around Amazon.
+          By day, I build technology for e-commerce brands, mostly around Amazon.
         </p>
         <p>
           I currently work as a CTO in the agency world, while building a product
@@ -29,7 +29,7 @@ export default function About() {
           systems. Clean definitions. Fewer charts, better questions.
         </p>
         <p>
-          Outside work, I train—cycling, running, lifting. I chase the slow
+          Outside work, I train: cycling, running, lifting. I chase the slow
           progress that comes from consistency.
         </p>
         <p>
