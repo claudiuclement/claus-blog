@@ -66,6 +66,7 @@ export default function TextSelection({ articleUrl }: TextSelectionProps) {
         top: selection.y,
       }}
     >
+      <span className="share-label-popup">Share:</span>
       <a
         href={`https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`}
         target="_blank"

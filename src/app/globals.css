@@ -361,6 +361,13 @@ p {
   animation: fadeIn 0.15s ease-out;
 }
 
+.share-label-popup {
+  color: var(--bg-color);
+  font-size: 11px;
+  padding: 4px 4px 4px 8px;
+  opacity: 0.7;
+}
+
 .text-selection-popup a {
   color: var(--bg-color);
   text-decoration: none;
