@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function ReadingProgress() {
   const [progress, setProgress] = useState(0);
+  const [showComplete, setShowComplete] = useState(false);
 
   useEffect(() => {
     const updateProgress = () => {
@@ -11,6 +12,7 @@ export default function ReadingProgress() {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
       setProgress(scrollPercent);
+      setShowComplete(scrollPercent >= 99);
     };
 
     window.addEventListener("scroll", updateProgress);
@@ -20,11 +22,18 @@ export default function ReadingProgress() {
   }, []);
 
   return (
-    <div className="reading-progress-container">
-      <div
-        className="reading-progress-bar"
-        style={{ width: `${progress}%` }}
-      />
-    </div>
+    <>
+      <div className="reading-progress-container">
+        <div
+          className="reading-progress-bar"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
+      {showComplete && (
+        <div className="reading-complete">
+          End of article
+        </div>
+      )}
+    </>
   );
 }
