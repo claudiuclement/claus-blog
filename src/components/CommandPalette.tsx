@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 
 interface Article {
@@ -84,9 +84,18 @@ export default function CommandPalette({ articles }: CommandPaletteProps) {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [handleKeyDown]);
 
+  const resultsRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     setSelectedIndex(0);
   }, [query]);
+
+  useEffect(() => {
+    const selected = resultsRef.current?.querySelector(".selected");
+    if (selected) {
+      selected.scrollIntoView({ block: "nearest" });
+    }
+  }, [selectedIndex]);
 
   if (!open) return null;
 
@@ -101,7 +110,7 @@ export default function CommandPalette({ articles }: CommandPaletteProps) {
           autoFocus
           className="command-palette-input"
         />
-        <div className="command-palette-results">
+        <div className="command-palette-results" ref={resultsRef}>
           {allResults.length === 0 && (
             <div className="command-palette-empty">No results found</div>
           )}
