@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getArticle, getAllArticleSlugs, getAdjacentArticles } from "@/lib/articles";
 import Link from "next/link";
+import ShareButtons from "@/components/ShareButtons";
 
 const SITE_URL = "https://claudiuclement.com";
 
@@ -72,6 +73,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
       <div
         className="article-content"
         dangerouslySetInnerHTML={{ __html: article.content }}
+      />
+      <ShareButtons
+        title={article.title}
+        url={`${SITE_URL}/${slug}/`}
       />
       <nav className="article-nav">
         {prev ? (
