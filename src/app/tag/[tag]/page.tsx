@@ -6,8 +6,13 @@ interface TagPageProps {
   params: Promise<{ tag: string }>;
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const tags = getAllTags();
+  if (tags.length === 0) {
+    return [{ tag: "_placeholder" }];
+  }
   return tags.map((tag) => ({ tag }));
 }
 
