@@ -5,6 +5,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import CommandPalette from "@/components/CommandPalette";
 import KeyboardShortcutHint from "@/components/KeyboardShortcutHint";
 import KonamiCode from "@/components/KonamiCode";
+import ConsoleMessage from "@/components/ConsoleMessage";
 import { getAllArticlesMeta } from "@/lib/articles";
 
 const SITE_URL = "https://claudiuclement.com";
@@ -104,6 +105,7 @@ export default function RootLayout({
         </main>
         <CommandPalette articles={articles} />
         <KonamiCode />
+        <ConsoleMessage />
       </body>
     </html>
   );
