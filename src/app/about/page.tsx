@@ -41,6 +41,19 @@ export default function About() {
           I&apos;m trying to make clearer.
         </p>
       </div>
+
+      <h2>Past work</h2>
+      <ul>
+        <li>
+          <a href="/phd-thesis.pdf" download>PhD Thesis</a> (PDF)
+        </li>
+        <li>
+          <a href="https://claudiuclement.medium.com/" target="_blank" rel="noopener noreferrer">Medium blog</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/newsletters/7029814680084721664/" target="_blank" rel="noopener noreferrer">LinkedIn newsletter</a>
+        </li>
+      </ul>
     </>
   );
 }
