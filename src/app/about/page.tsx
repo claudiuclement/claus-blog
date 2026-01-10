@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import ProfileImage from "@/components/ProfileImage";
 
 export const metadata: Metadata = {
   title: "About - Claudiu Clement",
@@ -14,13 +14,7 @@ export default function About() {
         <Link href="/">← Essays</Link>
       </p>
       <h1>About</h1>
-      <Image
-        src="/profile.jpg"
-        alt="Claudiu Clement"
-        width={150}
-        height={150}
-        className="profile-image"
-      />
+      <ProfileImage />
       <div className="bio-content">
         <p>I&apos;m Claudiu.</p>
         <p>
