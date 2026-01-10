@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -13,6 +14,13 @@ export default function About() {
         <Link href="/">← Essays</Link>
       </p>
       <h1>About</h1>
+      <Image
+        src="/profile.jpg"
+        alt="Claudiu Clement"
+        width={150}
+        height={150}
+        className="profile-image"
+      />
       <div className="bio-content">
         <p>I&apos;m Claudiu.</p>
         <p>

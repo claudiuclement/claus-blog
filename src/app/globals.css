@@ -134,6 +134,11 @@ p {
   margin-top: 20px;
 }
 
+.profile-image {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
 .bio-content p {
   margin-bottom: 1em;
 }
