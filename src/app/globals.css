@@ -18,6 +18,15 @@
   --code-bg: #2a2a2a;
 }
 
+[data-theme="oatmeal"] {
+  --text-color: #1a1915;
+  --bg-color: #faf9f5;
+  --link-color: #cc785c;
+  --meta-color: #6b6560;
+  --border-color: #e8e4dd;
+  --code-bg: #f0ede6;
+}
+
 * {
   margin: 0;
   padding: 0;
