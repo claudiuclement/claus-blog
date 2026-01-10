@@ -21,7 +21,7 @@ export default function About() {
         <p>
           I currently work as a CTO in the agency world, while building a product
           that shortens the path from insight to action. In this space, data is
-          messy and decisions are expensive. Clarity is a competitive advantage.
+          messy and decisions are expensive. <strong>Clarity</strong> is a competitive advantage.
         </p>
         <p>
           My background is statistical/ML heavy. I&apos;m allergic to vague metrics
