@@ -18,19 +18,17 @@ export default function CommandPalette({ articles }: CommandPaletteProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const router = useRouter();
 
+  const setTheme = (theme: string) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  };
+
   const commands = [
     { id: "home", label: "Go to Home", action: () => router.push("/") },
     { id: "about", label: "Go to About", action: () => router.push("/about/") },
-    {
-      id: "theme",
-      label: "Toggle Dark Mode",
-      action: () => {
-        const current = document.documentElement.getAttribute("data-theme");
-        const newTheme = current === "dark" ? "light" : "dark";
-        document.documentElement.setAttribute("data-theme", newTheme);
-        localStorage.setItem("theme", newTheme);
-      },
-    },
+    { id: "theme-light", label: "Theme: Light", action: () => setTheme("light") },
+    { id: "theme-dark", label: "Theme: Dark", action: () => setTheme("dark") },
+    { id: "theme-oatmeal", label: "Theme: Oatmeal", action: () => setTheme("oatmeal") },
   ];
 
   const filteredArticles = articles.filter((a) =>
