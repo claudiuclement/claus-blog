@@ -11,11 +11,11 @@ export default function Home() {
         <h1>Claudiu Clement&apos;s Thoughts</h1>
         <p>
           I write about technology, e-Commerce, and whatever else interests me.
-          {" "}
-          <Link href="/about/">About</Link>
-          {" · "}
-          <Link href="/building/">Building</Link>
         </p>
+        <nav className="header-nav">
+          <Link href="/about/">About</Link>
+          <Link href="/building/">Building</Link>
+        </nav>
       </header>
       <h2>Essays</h2>
       <ArticleList articles={articles} />
