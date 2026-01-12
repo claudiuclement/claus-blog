@@ -12,7 +12,9 @@ export default function Home() {
         <p>
           I write about technology, e-Commerce, and whatever else interests me.
           {" "}
-          <Link href="/about/">More about me</Link>
+          <Link href="/about/">About</Link>
+          {" · "}
+          <Link href="/building/">Building</Link>
         </p>
       </header>
       <h2>Essays</h2>
