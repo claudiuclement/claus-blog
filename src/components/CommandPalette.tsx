@@ -26,6 +26,7 @@ export default function CommandPalette({ articles }: CommandPaletteProps) {
   const commands = [
     { id: "home", label: "Go to Home", action: () => router.push("/") },
     { id: "about", label: "Go to About", action: () => router.push("/about/") },
+    { id: "building", label: "Go to Building", action: () => router.push("/building/") },
     { id: "theme-light", label: "Theme: Light", action: () => setTheme("light") },
     { id: "theme-dark", label: "Theme: Dark", action: () => setTheme("dark") },
     { id: "theme-oatmeal", label: "Theme: Oatmeal", action: () => setTheme("oatmeal") },
