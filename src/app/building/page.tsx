@@ -55,6 +55,60 @@ export default function Building() {
           </a>
         </p>
 
+        <h2>e-Comas Tech</h2>
+        <p>
+          <strong>The technology arm of the e-Comas group.</strong>
+        </p>
+        <p>
+          e-Comas is a global Amazon and marketplace agency founded in
+          Luxembourg in 2013, helping brands grow on Amazon, Shopify,
+          Walmart, CDiscount, Bol, Veepee and beyond. e-Comas Tech is
+          the group&apos;s software arm — a toolkit for marketplace
+          optimization and brand growth, spanning content comparison
+          across marketplaces, analytics dashboards, and the operational
+          tooling the agency relies on day to day.
+        </p>
+        <p>
+          I&apos;m CEO of <strong>e-Comas Tech SARL</strong>, the entity
+          that owns and ships this platform. Much of what we learn
+          building it for our brands feeds directly into Clarisix.
+        </p>
+        <p>
+          <strong>Link:</strong>{" "}
+          <a href="https://e-comas.tech" target="_blank" rel="noopener noreferrer">
+            e-comas.tech
+          </a>{" "}
+          ·{" "}
+          <a href="https://e-comas.com" target="_blank" rel="noopener noreferrer">
+            e-comas.com
+          </a>
+        </p>
+
+        <h2>Is Not Rocket Science (Podcast)</h2>
+        <p>
+          <strong>Depth over hype, in 25–35 minute chunks.</strong>
+        </p>
+        <p>
+          A podcast I&apos;m launching about the analytical frameworks,
+          statistical principles, and data structures that actually
+          explain why things work — or fail — in e-commerce. Each
+          episode is 25 to 35 minutes: long enough to go deep, short
+          enough to respect your time.
+        </p>
+        <p>
+          The format is simple: bring the most brilliant minds in the
+          space on, and have them explain the genuinely complex topics
+          driving e-commerce in language anyone can follow. No fluff,
+          no buzzword bingo.
+        </p>
+        <p>
+          <strong>Audience:</strong> anyone who cares about depth over
+          hype.
+        </p>
+        <p>
+          <strong>Stage:</strong> Pre-launch.
+        </p>
+
         <p className="meta" style={{ marginTop: "40px" }}>
           Last updated: April 2026
         </p>
