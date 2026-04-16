@@ -16,25 +16,47 @@ export default function Building() {
       <div className="bio-content">
         <p>What I&apos;m currently working on.</p>
 
-        <h2>Current Project</h2>
+        <h2>Clarisix</h2>
         <p>
-          <strong>Name:</strong> TBD
+          <strong>The executive view of your Amazon business.</strong>
         </p>
         <p>
-          <strong>What:</strong> TBD
+          Amazon businesses run on disconnected tools — advertising,
+          inventory, reviews, profitability — each speaking its own
+          language. The result is noise, not clarity. Founders and CFOs
+          end up stitching spreadsheets together and trusting metrics
+          that aren&apos;t accounting-ready.
         </p>
         <p>
-          <strong>Stage:</strong> TBD
+          Clarisix is the analytics platform I&apos;m building to fix
+          that. It unifies six core areas — Sales, Advertising,
+          Profitability, Inventory, Content, and Customer Experience —
+          into one place, with CFO-grade margin analysis and honest
+          metrics decision-makers can actually defend.
         </p>
         <p>
-          <strong>Links:</strong> TBD
+          The guiding principle is simple: <em>clarity is a product</em>.
+          Executives shouldn&apos;t need analysts, consultants, or
+          weekly rituals to understand how their business is performing.
+          Design should serve insight, not impress with complexity.
         </p>
-
-        <h2>Status</h2>
-        <p>TBD</p>
+        <p>
+          <strong>Stage:</strong> In development. Early adopters joining
+          the waitlist get a 30% lifetime discount.
+        </p>
+        <p>
+          <strong>Link:</strong>{" "}
+          <a href="https://clarisix.com" target="_blank" rel="noopener noreferrer">
+            clarisix.com
+          </a>{" "}
+          ·{" "}
+          <a href="https://clarisix.com/vision" target="_blank" rel="noopener noreferrer">
+            vision
+          </a>
+        </p>
 
         <p className="meta" style={{ marginTop: "40px" }}>
-          Last updated: January 2026
+          Last updated: April 2026
         </p>
       </div>
     </>
