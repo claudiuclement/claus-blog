@@ -28,7 +28,7 @@ export default function Building() {
           that aren&apos;t accounting-ready.
         </p>
         <p>
-          Clarisix is the analytics platform I&apos;m building to fix
+          Clarisix is the analytics platform I&apos;m co-founding to fix
           that. It unifies six core areas — Sales, Advertising,
           Profitability, Inventory, Content, and Customer Experience —
           into one place, with CFO-grade margin analysis and honest
